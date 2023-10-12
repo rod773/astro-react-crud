@@ -557,10 +557,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@nanostores/preact@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@nanostores/preact/-/preact-0.5.0.tgz#181af4a04e2ec0345f3555c9b969ddd91816a815"
-  integrity sha512-Zq5DEAY+kIfwJ1NPd43D1mpsbISuiD6N/SuTHrt/8jUoifLwXaReaZMAnvkvbIGOgcB1Hy++A9jZix2taNNYxQ==
+"@nanostores/react@^0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@nanostores/react/-/react-0.7.1.tgz#e0446f5cacc9fa53448c454f5d00ddb0f906a37a"
+  integrity sha512-EXQg9N4MdI4eJQz/AZLIx3hxQ6BuBmV4Q55bCd5YCSgEOAW7tGTsIZxpRXxvxLXzflNvHTBvfrDNY38TlSVBkQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

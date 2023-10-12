@@ -1,9 +1,28 @@
+import { user, users } from "../store/user";
+import { useStore } from "@nanostores/react";
+
 const UserForm = () => {
+  const $user = useStore(user);
+  const $users = useStore(users);
+
+  const createOrUpdateUser = (e) => {
+    user.set({
+      _id: "",
+      name: "",
+      email: "",
+      password: "",
+    });
+  };
+
+  const setUser = (e) => {
+    user.set({ ...$user, [e.target.name]: e.target.value });
+  };
+
   return (
     <div>
       <h1>UserForm</h1>
       <div className="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 flex justify-center p-8">
-        <form className="w-full max-w-lg">
+        <form onSubmit={createOrUpdateUser} className="w-full max-w-lg">
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
@@ -17,6 +36,9 @@ const UserForm = () => {
                 id="name"
                 type="text"
                 placeholder="Name"
+                name="name"
+                onClick={setUser}
+                value={$user.name}
               />
               <p className="text-red-500 text-xs italic">
                 Please fill out this field.
@@ -34,6 +56,9 @@ const UserForm = () => {
                 id="email"
                 type="email"
                 placeholder="Email"
+                name="email"
+                onClick={setUser}
+                value={$user.email}
               />
             </div>
           </div>
@@ -50,6 +75,9 @@ const UserForm = () => {
                 id="password"
                 type="password"
                 placeholder="******************"
+                name="password"
+                onClick={setUser}
+                value={$user.password}
               />
             </div>
           </div>
