@@ -9,10 +9,12 @@ import UserTable from "../components/UserTable";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
     <title>Astro</title>
   </head>
-  <body>
-    <h1>Astro</h1>
+  <body
+    class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900"
+  >
     <UserForm client:visible />
     <UserTable client:visible />
   </body>
